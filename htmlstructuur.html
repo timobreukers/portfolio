@@ -4,7 +4,11 @@
       <title>Portfolio Timo Breukers</title>
       <link rel="stylesheet" type="text/css" href="CSS opmaak.css">
    </head>
-
+   <form action="https://formspree.io/f/{form_id}" method="post">
+    <label for="email">Your Email</label>
+    <input name="Email" id="email" type="email">
+    <button type="submit">Submit</button>
+  </form>
          <!-- Headings -->
          <div class="container"> 
          <section id="showcase">
@@ -89,9 +93,51 @@
            <li><a href="#news">Smart Business</a></li>
            <li><a href="#news">Smart Project</a></li>
            <li><a href="#news">Contact</a></li>
+                              <!--clock-->
+         <body onLoad="initClock()">
+
+          <div id="timedate">
+            <a id="mon">January</a>
+            <a id="d">1</a>,
+            <a id="y">0</a><br />
+            <a id="h">12</a> :
+            <a id="m">00</a>:
+            <a id="s">00</a>:
+            <a id="mi">000</a>
+          </div>
+    <script>
+
+      Number.prototype.pad = function(n) {
+        for (var r = this.toString(); r.length < n; r = 0 + r);
+        return r;
+      };
+      
+      function updateClock() {
+        var now = new Date();
+        var milli = now.getMilliseconds(),
+          sec = now.getSeconds(),
+          min = now.getMinutes(),
+          hou = now.getHours(),
+          mo = now.getMonth(),
+          dy = now.getDate(),
+          yr = now.getFullYear();
+        var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        var tags = ["mon", "d", "y", "h", "m", "s", "mi"],
+          corr = [months[mo], dy, yr, hou.pad(2), min.pad(2), sec.pad(2), milli];
+        for (var i = 0; i < tags.length; i++)
+          document.getElementById(tags[i]).firstChild.nodeValue = corr[i];
+      }
+      
+      function initClock() {
+        updateClock();
+        window.setInterval("updateClock()", 1);
+      }
+      
+      </script>
+      </body>
          </div>  
          </ul>
-         
+
          <h3>Dropdown Menu inside a Navigation Bar</h3>
          <p>Hover over the "Dropdown" link to see the dropdown menu.</p>
          
@@ -127,9 +173,8 @@
             <p>
             <H3>6. Overige</H3>   
             </p>
-
-        
-
+            
+            
 
          </div>
 </html>
