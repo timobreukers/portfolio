@@ -3,15 +3,12 @@
 
 <head>
   <title>Portfolio Timo Breukers</title>
-  <link rel="stylesheet" type="text/css" href="CSS opmaak.css">
+  <link rel="stylesheet" type="text/css" href="cssopmaak.css">
 </head>
 
-<!--formulier invullen toevoegen-->
-<form action="https://formspree.io/f/{form_id}" method="post">
-  <label for="email">Your Email</label>
-  <input name="Email" id="email" type="email">
-  <button type="submit">Submit</button>
-</form>
+<!--formulier invullen toevoegen via google forms-->
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfnAHUAQQbvQRotKWBoZt6IDMo-Q9CjZriFGTEro0VOzKUF-A/viewform?embedded=true" 
+width="640" height="1690" frameborder="0" marginheight="0" marginwidth="0">Laden…</iframe>
 
 <!--Youtube video toevoegen via delen > Insluiten> link kopieren en plakken-->
 <iframe width="560" height="315" src="https://www.youtube.com/embed/_YseaPdACwU" title="YouTube video player"
@@ -97,9 +94,9 @@
   </head>
 
   <body>
-
+    <li class="menutext">
     <ul>
-      <div class="container tekst">
+      
         <li><a href="home.html">Home</a></li>
         <li><a href="#news">Introductie</a></li>
         <li class="dropdown">
@@ -110,25 +107,26 @@
             <a href="#">Conclusie</a>
           </div>
         </li>
+        <li><a href="#news">Contact</a></li>
         <li><a href="smartme.html">Smart Me</a></li>
         <li><a href="#news">Smart Connection</a></li>
         <li><a href="#news">Smart Technology</a></li>
         <li><a href="#news">Smart Business</a></li>
         <li><a href="#news">Smart Project</a></li>
-        <li><a href="#news">Contact</a></li>
+        
+        
         <!--clock-->
 
         <body onLoad="initClock()">
 
           <div id="timedate">
             <a id="mon">January</a>
-            <a id="d">1</a>,
+            <a id="d">1</a>
             <a id="y">0</a><br />
             <a id="h">12</a> :
-            <a id="m">00</a>:
-            <a id="s">00</a>:
-            <a id="mi">000</a>
-          </div>
+            <a id="m">00</a>
+         
+         
           <script>
 
             Number.prototype.pad = function (n) {
@@ -138,16 +136,15 @@
 
             function updateClock() {
               var now = new Date();
-              var milli = now.getMilliseconds(),
-                sec = now.getSeconds(),
+              var milli = 
                 min = now.getMinutes(),
                 hou = now.getHours(),
                 mo = now.getMonth(),
                 dy = now.getDate(),
                 yr = now.getFullYear();
-              var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-              var tags = ["mon", "d", "y", "h", "m", "s", "mi"],
-                corr = [months[mo], dy, yr, hou.pad(2), min.pad(2), sec.pad(2), milli];
+              var months = ["januari", "februari", "maart", "april", "mei", "juni", "juli", "augustus", "september", "oktober", "november", "december"];
+              var tags = ["mon", "d", "y", "h", "m"],
+                corr = [dy,months[mo], yr, hou.pad(2), min.pad(2)];
               for (var i = 0; i < tags.length; i++)
                 document.getElementById(tags[i]).firstChild.nodeValue = corr[i];
             }
@@ -161,7 +158,7 @@
         </body>
       </div>
     </ul>
-
+  </li>
     <h3>Dropdown Menu inside a Navigation Bar</h3>
     <p>Hover over the "Dropdown" link to see the dropdown menu.</p>
 

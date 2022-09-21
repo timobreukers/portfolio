@@ -1,15 +1,19 @@
 body {background-color:hwb(0 18% 82%);}
 
 #timedate {
-  font: small-caps lighter 43px/150% "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
-  text-align:left;
-  width: 50%;
+  font: small-caps lighter 20px/150% "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+  text-align:right;
+  width: 80%;
   margin: 40px auto;
   color:#fff;
-  border-left: 3px solid #ed1f24;
   padding: 20px;
 }
 
+#menutext{
+  height: 70px;
+  width: 60%;
+  text-align:center
+}
 @media (min-width: 768px) {
   .navbar-icon-top.navbar-expand-md .navbar-nav .nav-link {
     text-align: center;
@@ -81,7 +85,7 @@ body {background-color:hwb(0 18% 82%);}
 
 
 body{
-	background-color:#f4f4f4;
+	background-color:#de0000;
 	color:#555;
 	font-family:Arial, Helvetica, sans-serif;
 	font-size:16px;
@@ -99,13 +103,7 @@ ul li a{
 	width:80%;
 	margin:auto;
 	overflow:hidden;
-}
-
-.container tekst {
-	width: 80% ;
-	margin:auto;
-	overflow:hidden;
-	text-align:center ;
+  text-align: center;
 }
 
 #main-header{
