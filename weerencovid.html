@@ -97,6 +97,8 @@
         <li><a href="#news">Smart Business</a></li>
         <li><a href="#news">Smart Project</a></li>
         <li><a href="#news">Contact</a></li>
+        <li><a href="weerencovid.html">Weer en Covid</a></li>
+
         <!--clock-->
 
         <body onLoad="initClock()">
@@ -143,45 +145,52 @@
       </div>
     </ul>
 
-    <h3>Dropdown Menu inside a Navigation Bar</h3>
-    <p>Hover over the "Dropdown" link to see the dropdown menu.</p>
-
   </body>
 
   </html>
 
-  <!-- Paragraaf Welkom-->
-  <p>
-    Dit portfolio is opgesteld tijdens de Minor Smart Industry aan de HAN in Nijmegen. In het portfolio zijn de volgende
-    onderdelen te zien:
-    <!-- Paragraaf Introductie-->
-  <p>
-  <H3>1. Introductie</H3>
-  </p>
-  Mijn naam is Timo Breukers, 23 jaar oud en ik kom uit Winterswijk. Op Hogeschool Saxion in Enschede zit ik nu in het
-  vierde jaar van de opleiding Bedrijfskunde. Naast school ben ik werkzaam bij <a href="https://www.breukers.nl/"
-    target="_blank">Breukers Bouwmaterialen</a>
-  <hr> hier doe ik. Momenteel ben ik bezig met de Minor Smart Industry. Ik heb deze gekozen omdat...
-  <!-- Paragraaf Leerdoelen-->
-  <p>
-  <H3>2. Leerdoelen</H3>
-  </p>
-  <!-- Paragraaf Ontwikkelingen-->
-  <p>
-  <H3>3. Ontwikkelingen</H3>
-  </p>
-  <!-- Paragraaf Conclusie-->
-  <p>
-  <H3>4. Conclusie</H3>
-  </p>
-  <!-- Paragraaf Gemaakte werk-->
-  <p>
-  <H3>5. Gemaakte werk</H3>
-  </p>
-  <!-- Paragraaf Overige-->
-  <p>
-  <H3>6. Overige</H3>
-  </p>
+<!--weer-->
+    <head>
+      <meta charset="utf-8">
+      <title>Current Weather</title>
+    </head>
+    <body>
+      <div id="Weather">
+        <div id="description"></div>
+        <h1 id="temp"></h1>
+        <div id="location"></div>
+      </div>
+      <script lang="text/javascript">
+        // future javascript
+        function weatherBalloon( cityID ) {
+    var key = '0fc9f2d6aa3b2717eb5d9bf53b61d152';
+    fetch('https://api.openweathermap.org/data/2.5/weather?q=Winterswijk&APPID=0fc9f2d6aa3b2717eb5d9bf53b61d152')  
+    .then(function(resp) { return resp.json() }) // Convert data to json
+    .then(function(data) {drawWeather(data); // Call drawWeather
+    })
+    .catch(function() {
+      // catch any errors
+    });
+  }
+  function drawWeather( d ) {
+	var celcius = Math.round(parseFloat(d.main.temp)-273.15);
+	var fahrenheit = Math.round(((parseFloat(d.main.temp)-273.15)*1.8)+32); 
+	
+	document.getElementById('description').innerHTML = d.weather[0].description;
+	document.getElementById('temp').innerHTML = celcius + '&deg;';
+	document.getElementById('location').innerHTML = d.name;
+}
+  
+  window.onload = function() {
+    weatherBalloon( 6167865 );
+  }
+
+
+      </script>
+    </body>
+  
+
+</p>
 
 
 
