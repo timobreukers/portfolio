@@ -209,3 +209,50 @@
  
 }
 
+/* Bar bottom temperatuur X2 */
+/* Place the navbar at the bottom of the page, and make it stick */
+.navbarx2 {
+  background-color: rgb(42, 100, 158);
+  overflow: hidden;
+  position: fixed;
+  left: 91.7%;
+  bottom: 0%;
+  width: 8%;
+  height: 60px;
+  border-radius: 10px;
+}
+
+/* Style the links inside the navigation bar */
+.navbarx2 a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.navbarx2 a:hoverx{
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.navbarx2 a.activex{
+  background-color: #04AA6D;
+  color: white;
+}
+
+
+/* Vastzittende box met Datum, tijd en temperatuur */
+#timedate2 {
+  font: small-caps  15px/2% "Times New Roman";
+  text-align:center;
+  width: 100%;
+  margin: 0px auto;
+  color:#fff;
+  padding: 5px;
+ 
+}
