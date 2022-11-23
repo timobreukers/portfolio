@@ -70,7 +70,7 @@
 
   <div class="navbarx">
        
-          <body onLoad="initClock()">
+          <body>
 
             <div id="timedate">
               <a id="mon">January</a>
@@ -79,9 +79,9 @@
               <a id="h">12</a>
               <a id="h">:</a>
               <a id="m">00</a>
+            </div>
            
-           
-            <script>
+            <script lang=""text/javascript">
   
               Number.prototype.pad = function (n) {
                 for (var r = this.toString(); r.length < n; r = 0 + r);
@@ -102,15 +102,16 @@
                 for (var i = 0; i < tags.length; i++)
                   document.getElementById(tags[i]).firstChild.nodeValue = corr[i];
               }
-  
+              initClock();
               function initClock() {
                 updateClock();
                 window.setInterval("updateClock()", 1);
               }
   
             </script>
-          </body>
-        </div>   
+             
+        </body>
+   
   </div>
 
 <!--Vastzittende box met weer en plaats-->
