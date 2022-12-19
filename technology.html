@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Portfolio Timo Breukers</title>
+  <link rel="stylesheet" type="text/css" href="opmaak.css">
+  <link href="https://api.openweathermap.org/data/2.5/weather?q=Winterswijk&APPID=0fc9f2d6aa3b2717eb5d9bf53b61d152" rel="stylesheet"> 
+</head>
+
+<!-- Navigatiebalk -->
+<body>
+
+  <div id="navbar">
+    <div id="logo">Portfolio MSI Timo Breukers</div>
+    <div id="navbar-right">
+      <a href="home.html">Home</a>
+      <div class="dropdown">
+        <button class="dropbtn">Leerdoelen ⌵
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="leerdoelen.html">Opgestelde leerdoelen</a>
+          <a href="ontwikkelingen.html">Ontwikkelingen</a>
+          <a href="conclusie.html">Conclusie</a>
+        </div>
+      </div>
+      <a href="smartme.html">Smart Me</a>
+      <a href="connection.html">Smart Connection</a>
+      <a class="active" href="technology.html">Smart Technology</a>
+      <a href="business.html">Smart Business</a>
+      <a href="project.html">Smart Project</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+
+  <script>
+  // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
+  window.onscroll = function() {scrollFunction()};
+  
+  function scrollFunction() {
+    if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+      document.getElementById("navbar").style.padding = "42px 10px";
+      document.getElementById("logo").style.fontSize = "25px";
+    } else {
+      document.getElementById("navbar").style.padding = "60px 10px";
+      document.getElementById("logo").style.fontSize = "35px";
+    }
+  }
+  </script>
+
+
+  </body>
+
+  <div class="container">
+    <div style="margin-top:210px;padding:15px 15px ">      
+        <p><b><FONT size="+3"><FONT color="#2a639d"> Smart Technology</FONT></FONT></b></p>
+        <p>Bij de module 'Smart Technology' worden er workshops gegeven over het ontwikkelen van een PCB, 3D printen, 3D ontwerpen maken met Solidworks en solderen. Hieronder wordt de inhoud van de workshops kort beschreven waarna per workshop mijn persoonlijke leermomenten zijn beschreven. Elke workshops heeft door middel van de sterren een beoordeling gekregen op basis van de interesse in de workshop en hoe leuk ik het vond. De onderbouwing van deze beoordeling is terug te zien onder 'Lesinhoud' en 'Leermomenten'. Doordat ik bij deze module naast de workshops ook veel thuis ben bezig geweest met onder andere het ontwikkelen van de PCB en Solidworks worden deze onderdelen stapsgewijs onder de workshops toegelicht.</p>
+    <hr></hr>
+      <p><i><FONT size="+2">Workshop 1 (1 september 2022): <b>Eerste workshop PCB ontwikkelen</b></i></FONT></p>
+      <p><img src="C:\Users\Gebruiker\OneDrive\Documenten\Saxion\Minor\MSI2A Smart Connection\webpagina\viersterren.jpg"width="130" height="30"></p>
+      <p><br><b>Lesinhoud</b></br> Tijdens de eerste workshop werd er kennis gemaakt met de PCB en de onderdelen die bij de PCB horen. Voor mij was dit helemaal nieuw dus ik heb veel nieuwe informatie gekregen tijdens de workshop. Door de vele informatie vond ik het persoonlijk nog vrij onduidelijk wat de stappen waren om tot een eindproduct te komen en wat dit eindproduct dan precies moest worden. Het zou hierbij van zijn geweest als dit iets gestructureerder werd weergegeven en er bijvoorbeeld een voorbeeld van een eindresultaat aanwezig was geweest. Hierdoor zou ik iets meer gevoel en duidelijkheid bij de opdracht krijgen. Deze workshop waren we ook direct begonnen met het opbouwen van het breadboard, hierbij moesten we aan de hand van de modules op <a href="https://www.robotexchange.io/c/modules/54"target="_blank">Robotexchange.io</a> aan de slag met het programmeren van de componenten (LED, bodemvocht en temperatuur/luchtvochtigheid). Ondanks dat de module de stappen uitlegde vond ik het nog vrij ingewikkeld. De bedrijfskundige studenten vonden dit allemaal erg lastig waardoor Mathijs veel bezig was met uitleggen. Ik was daarom erg blij dat naast mij een technische medestudent zat, die zoiets al eerder had gedaan. Op de momenten dat ik vastliep kon ik het hem vragen en kwamen we weer een stap verder. Door de hulp ben ik tijdens deze workshop erg ver gekomen met de modules. Tot het verbinden met internet werkt het breadboard nu. </p>
+      <img src="C:\Users\Gebruiker\OneDrive\Documenten\Saxion\Minor\MSI2A Smart Connection\webpagina\eerste workshop pcb.jpg" width="266" height="200"></br>  
+      <p><br><b>Leermomenten</b></br> Ik vond het eigenlijk wel erg leuk om praktisch bezig te gaan. Ondanks dat het wel ingewikkeld was, ben ik door de hulp van medestudenten erg ver gekomen en veel nieuwe technische dingen te weten gekomen. Voor volgende workshops neem ik mee dat ik naast iemand met technische kennis moet gaan zitten zodat ik makkelijk vragen kan stellen aangezien Mathijs erg druk is. Ook wil ik de komende workshops meer duidelijkheid krijgen over wat er verwacht wordt van het eindresultaat. </p>      
+    <hr></hr>
+      <p><i><FONT size="+2">Workshop 2 (8 september 2022): <b>Tweede workshop PCB ontwikkelen</b></i></FONT></p>
+      <p><img src="C:\Users\Gebruiker\OneDrive\Documenten\Saxion\Minor\MSI2A Smart Connection\webpagina\viersterren.jpg"width="130" height="30"></p>
+      <p><br><b>Lesinhoud</b> Deze les gingen we verder met het opbouwen van het breadboard. Vandaag ging het erg moeizaam, ik begon namelijk met het testen van het breadboard en de componenten om te controleren of alles nog werkte na de vorige workshop. Ik kwam er achter dat een component niet werkte. Na eerst zelf het een en ander te proberen kwam ik er niet uit, daarom wederom een medestudent gevraagd en met hem ben ik het breadboard nog eens langs gelopen. Blijkbaar zat er één kabel in de verkeerd plus hierdoor werkte die niet. Daarnaast is er tijdens deze workshop uitleg gegeven over Blynck en het formatten van de programmeercode in Visual Code Studio. Hier heb ik aantekeningen gemaakt, die mij helpen bij het verder opbouwen van het Blynck dashboard. Ook heb ik ondertussen met een aantal medestudenten gesproken om erachter te komen wat er precies verwacht wordt tijdens deze module. Kortgezegd: als de componenten op het breadboard werken, wordt er een PCB ontwerpt. Het ontwerp wordt digitaal naar China opgestuurd waarna het daar fysiek wordt gemaakt. Uiteindelijk zal de PCB door de geprogrammeerde code automatisch een plant moeten verzorgen door op de juiste momenten licht en water te geven. Voor de PCB moet een bakje ontworpen worden die 3D geprint wordt. Dit zal dan samen zorgen voor één eindproduct: de slimme plant.  </p>
+      <p><br><b>Leermomenten</b></br> Deze workshop heb ik inzicht gekregen in de functionaliteiten van Blynck (het online dashboard). Daarnaast ook wat informatie verkregen over de integratie van de verschillende codes naar één code.</p>   
+    <hr></hr>
+      <p><i><FONT size="+2">Workshop 3 (15 september 2022): <b>Eerste workshop 3D printen</b></i></FONT></p>
+      <p><img src="C:\Users\Gebruiker\OneDrive\Documenten\Saxion\Minor\MSI2A Smart Connection\webpagina\eensterren.jpg"width="130" height="30"></p>
+      <p><br><b>Lesinhoud</b></br> Dit was de eerste workshop over 3D printen. Ik heb al wel eens op beurzen en open dagen 3D printen gezien, zowel het standaard 3D printen als 3D betonprinten. Ik vind dit zelf altijd erg bijzonder om te zien aangezien het ook een techniek is de weinig wordt gebruikt. Hierdoor was ik erg enthousiast om naar deze workshop te gaan. Echter vond ik de les heel erg theoretisch en langdradig. Het ging over de verschillende manieren van 3D printen, de verschillende printers en mogelijkheden. Dit was een enorme lading aan theorie, veel leek ook op elkaar waardoor het moeilijk te volgen was. De volgende workshop gaan we kijken bij de 3D printers op de HAN, naar mijn idee was het beter geweest om dit direct de eerste les te doen zodat je een beeld hebt bij wat er verteld wordt. Aan de hand van de 3D print workshops zal er een bakje ontworpen en geprint worden voor de PCB.</p>
+      <p><br><b>Leermomenten</b></br> Ondanks dat ik voor de workshop erg enthousiast was over 3D printen, was ik dit na de workshop niet meer. Ik merkte dat de vele kleine verschillen van 3D printen en de enorme lading aan eentonige theorie mijn interesse wegnam. Hierdoor heb ik ook het leerdoel van deze module iets bijgewerkt. Ik wil voor mezelf duidelijk gaan maken wat mij wel interesseerd op technisch vlak waardoor ik meer kan focussen op onderwerpen die mij wel interesseren. Doordat de minor ook de vrijheid geeft wil ik hier bewuste afwegingen gaan maken om in een later stadium bij bepaalde onderdelen meer hulp van anderen te krijgen.</p>   
+    <hr></hr>
+      <p><i><FONT size="+2">Workshop 4 (22 september 2022): <b>Blynck en PCB ontwerpen</b></i></FONT></p>
+      <p><img src="C:\Users\Gebruiker\OneDrive\Documenten\Saxion\Minor\MSI2A Smart Connection\webpagina\viersterren.jpg"width="130" height="30"></p>
+      <p><br><b>Lesinhoud</b></br>mepdmeddmp</p>
+      <p><br><b>Leermomenten</b></br>meoidmeimedme</p>
+    <hr></hr>
+      <p><i><FONT size="+2">Workshop 5 (29 september 2022): <b>Tweede workshop 3D printen</b></i></FONT></p>
+      <p><img src="C:\Users\Gebruiker\OneDrive\Documenten\Saxion\Minor\MSI2A Smart Connection\webpagina\tweesterren.jpg"width="130" height="30"></p>
+      <p><br><b>Lesinhoud</b></br>mepdmeddmp</p>
+      <p><br><b>Leermomenten</b></br>meoidmeimedme</p>      
+    <hr></hr>
+      <p><i><FONT size="+2">Workshop 6 (6 oktober 2022): <b>Derde workshop 3D printen</b></i></FONT></p>
+      <p><img src="C:\Users\Gebruiker\OneDrive\Documenten\Saxion\Minor\MSI2A Smart Connection\webpagina\tweesterren.jpg"width="130" height="30"></p>
+      <p><br><b>Lesinhoud</b></br>mepdmeddmp</p>
+      <p><br><b>Leermomenten</b></br>meoidmeimedme</p>
+    <hr></hr>
+      <p><i><FONT size="+2">Workshop 7 (24 november 2022): <b>Vierde workshop 3D printen</b></i></FONT></p>
+      <p><img src="C:\Users\Gebruiker\OneDrive\Documenten\Saxion\Minor\MSI2A Smart Connection\webpagina\eensterren.jpg"width="130" height="30"></p>
+      <p><br><b>Lesinhoud</b></br>mepdmeddmp</p>
+      <p><br><b>Leermomenten</b></br>meoidmeimedme</p>
+    <hr></hr>
+      <p><i><FONT size="+2">Workshop 8 (24 november 2022): <b>Solderen</b></i></FONT></p>
+      <p><img src="C:\Users\Gebruiker\OneDrive\Documenten\Saxion\Minor\MSI2A Smart Connection\webpagina\vijfsterren.jpg"width="130" height="30"></p>
+      <p><br><b>Lesinhoud</b></br>mepdmeddmp</p>
+      <p><br><b>Leermomenten</b></br>meoidmeimedme</p>      
+  </div>
+
+  <!-- Vastzittende box met datum en tijd -->
+
+  <div class="navbarx">
+       
+          <body>
+
+            <div id="timedate">
+              <a id="mon">January</a>
+              <a id="d">1</a>
+              <a id="y">0</a>
+              <a id="h">12</a>
+              <a id="h">:</a>
+              <a id="m">00</a>
+            </div>
+           
+            <script lang=""text/javascript">
+  
+              Number.prototype.pad = function (n) {
+                for (var r = this.toString(); r.length < n; r = 0 + r);
+                return r;
+              };
+  
+              function updateClock() {
+                var now = new Date();
+                var milli = 
+                  min = now.getMinutes(),
+                  hou = now.getHours(),
+                  mo = now.getMonth(),
+                  dy = now.getDate(),
+                  yr = now.getFullYear();
+                var months = ["januari", "februari", "maart", "april", "mei", "juni", "juli", "augustus", "september", "oktober", "november", "december"];
+                var tags = ["mon", "d", "y", "h", "m"],
+                  corr = [dy,months[mo], yr, hou.pad(2), min.pad(2)];
+                for (var i = 0; i < tags.length; i++)
+                  document.getElementById(tags[i]).firstChild.nodeValue = corr[i];
+              }
+              initClock();
+              function initClock() {
+                updateClock();
+                window.setInterval("updateClock()", 1);
+              }
+  
+            </script>
+             
+        </body>
+   
+  </div>
+
+<!--Vastzittende box met weer en plaats-->
+  <div class="navbarx2">
+  <div id="timedate2">
+    <body>    
+      <div>
+       <h1 id="temp"></h1>
+       <div id="location"></div>
+      </div>
+  
+  
+  <script lang=""text/javascript">
+    const key = '';
+    if(key=='') document.getElementById('temp').innerHTML = ('0fc9f2d6aa3b2717eb5d9bf53b61d152');
+    
+    function weatherBallon( cityID ) {
+        fetch('https://api.openweathermap.org/data/2.5/weather?q=Winterswijk&APPID=0fc9f2d6aa3b2717eb5d9bf53b61d152')  
+        .then(function(resp) { return resp.json() }) // Convert data to json
+        .then(function(data) {
+            drawWeather(data);
+        })
+        .catch(function() {
+            // catch any errors
+        });
+    }
+    function drawWeather( d ) {
+      var celcius = Math.round(parseFloat(d.main.temp)-273.15);
+        var fahrenheit = Math.round(((parseFloat(d.main.temp)-273.15)*1.8)+32);
+      var description = d.weather[0].description; 
+        
+     
+        document.getElementById('temp').innerHTML = celcius + '&deg;';
+        document.getElementById('location').innerHTML = d.name;
+      
+      if( description.indexOf('rain') > 0 ) {
+          document.body.className = 'regenachtig';
+      } else if( description.indexOf('cloudy') > 0 ) {
+          document.body.className = 'bewolkt';
+      } else if( description.indexOf('sunny') > 0 ) {
+          document.body.className = 'zonnig';
+      } else {
+          document.body.className = 'helder';
+      }
+    }
+    window.onload = function() {
+        weatherBallon( 6167865 );
+    }
+  </script>
+  
+  
+  </body>
+</div>
+</div>
+
+ 
+
+  </html>

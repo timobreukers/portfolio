@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Portfolio Timo Breukers</title>
+  <link rel="stylesheet" type="text/css" href="TestOpmaak.css">
+</head>
+
+
+<!-- Headings -->
+<div class="container">
+  <section id="showcase">
+    <h1>MSI Portfolio Timo Breukers</h1>
+  </section>
+  <!-- Navigatiebar -->
+  <html>
+
+  <head>
+    <style>
+      body {
+        background-color: rgb(255, 255, 255);
+      }
+
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: rgb(39, 0, 157);
+      }
+
+      li {
+        float: left;
+      }
+
+      li a,
+      .dropbtn {
+        display: inline-block;
+        color: white;
+        text-align: right;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      li a:hover,
+      .dropdown:hover .dropbtn {
+        background-color: rgb(0, 95, 236);
+      }
+
+      li.dropdown {
+        display: inline-block;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: rgb(39, 0, 157);
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+      }
+
+      .dropdown-content a {
+        color: rgb(255, 255, 255);
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+      }
+
+      .dropdown-content a:hover {
+        background-color: rgb(0, 95, 236);
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+    </style>
+  </head>
+
+  <body>
+    <li class="menutext">
+    <ul>
+      
+        <li><a href="home.html">Home</a></li>
+        <li><a href="#news">Introductie</a></li>
+        <li class="dropdown">
+          <a href="javascript:void(0)" class="dropbtn">Leerdoelen ⌵</a>
+          <div class="dropdown-content">
+            <a href="#">Opgestelde leerdoelen</a>
+            <a href="#">Ontwikkelingen</a>
+            <a href="#">Conclusie</a>
+          </div>
+        </li>
+        <li><a href="#news">Contact</a></li>
+        <li><a href="smartme.html">Smart Me</a></li>
+        <li><a href="test.html">Smart Connection</a></li>
+        <li><a href="#news">Smart Technology</a></li>
+        <li><a href="#news">Smart Business</a></li>
+        <li><a href="#news">Smart Project</a></li>
+        <li><a href="weerencovid.html">Weer en Covid</a></li>
+        
+        
+        <!--clock-->
+
+        <body onLoad="initClock()">
+
+          <div id="timedate">
+            <a id="mon">January</a>
+            <a id="d">1</a>
+            <a id="y">0</a><br />
+            <a id="h">12</a> :
+            <a id="m">00</a>
+         
+         
+          <script>
+
+            Number.prototype.pad = function (n) {
+              for (var r = this.toString(); r.length < n; r = 0 + r);
+              return r;
+            };
+
+            function updateClock() {
+              var now = new Date();
+              var milli = 
+                min = now.getMinutes(),
+                hou = now.getHours(),
+                mo = now.getMonth(),
+                dy = now.getDate(),
+                yr = now.getFullYear();
+              var months = ["januari", "februari", "maart", "april", "mei", "juni", "juli", "augustus", "september", "oktober", "november", "december"];
+              var tags = ["mon", "d", "y", "h", "m"],
+                corr = [dy,months[mo], yr, hou.pad(2), min.pad(2)];
+              for (var i = 0; i < tags.length; i++)
+                document.getElementById(tags[i]).firstChild.nodeValue = corr[i];
+            }
+
+            function initClock() {
+              updateClock();
+              window.setInterval("updateClock()", 1);
+            }
+
+          </script>
+        </body>
+      </div>
+    </ul>
+  </li>
+    <h3>Dropdown Menu inside a Navigation Bar</h3>
+    <p>Hover over the "Dropdown" link to see the dropdown menu.</p>
+
+  </body>
+
+  </html>
+
+  <!-- Paragraaf Welkom-->
+  <p>
+    Dit portfolio is opgesteld tijdens de Minor Smart Industry aan de HAN in Nijmegen. In het portfolio zijn de volgende
+    onderdelen te zien:
+    <!-- Paragraaf Introductie-->
+  <p>
+  <H3>1. Introductie</H3>
+  </p>
+  Mijn naam is Timo Breukers, 23 jaar oud en ik kom uit Winterswijk. Op Hogeschool Saxion in Enschede zit ik nu in het
+  vierde jaar van de opleiding Bedrijfskunde. Naast school ben ik werkzaam bij <a href="https://www.breukers.nl/"
+    target="_blank">Breukers Bouwmaterialen</a>
+  <hr> hier doe ik. Momenteel ben ik bezig met de Minor Smart Industry. Ik heb deze gekozen omdat...
+  <!-- Paragraaf Leerdoelen-->
+  <p>
+  <H3>2. Leerdoelen</H3>
+  </p>
+  <!-- Paragraaf Ontwikkelingen-->
+  <p>
+  <H3>3. Ontwikkelingen</H3>
+  </p>
+  <!-- Paragraaf Conclusie-->
+  <p>
+  <H3>4. Conclusie</H3>
+  </p>
+  <!-- Paragraaf Gemaakte werk-->
+  <p>
+  <H3>5. Gemaakte werk</H3>
+  </p>
+  <!-- Paragraaf Overige-->
+  <p>
+  <H3>6. Overige</H3>
+ 
+<!--formulier invullen toevoegen via google forms-->
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfnAHUAQQbvQRotKWBoZt6IDMo-Q9CjZriFGTEro0VOzKUF-A/viewform?embedded=true" 
+width="640" height="1690" frameborder="0" marginheight="0" marginwidth="0">Laden…</iframe>
+
+<!--Youtube video toevoegen via delen > Insluiten> link kopieren en plakken-->
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_YseaPdACwU" title="YouTube video player"
+  frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen></iframe>
+
+<!--Presentatie toevoegen aan website. presentatie online openen via OneDrive > delen > genereren-->
+<iframe
+  src="https://onedrive.live.com/embed?cid=9A40D6AFD4F67205&amp;resid=9A40D6AFD4F67205%2113448&amp;authkey=APCN6m3v3iMWjXY&amp;em=2&amp;wdAr=1.7777777777777777"
+  width="476px" height="288px" frameborder="0">Dit is een ingesloten <a target="_blank"
+    href="https://office.com">Microsoft Office</a>-presentatiebestand dat mogelijk is gemaakt met <a target="_blank"
+    href="https://office.com/webapps">Office</a>.</iframe>
+  </p>
+
+
+</div>
+
+</html>

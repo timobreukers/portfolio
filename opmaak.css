@@ -5,7 +5,7 @@
 	overflow:hidden;
   text-align: center;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 16px;
   font-family: 'Times New Roman', Times, serif;
 }
 
@@ -40,7 +40,7 @@
 
 /* Style the logo */
 #logo {
-  font-size: 40px;
+  font-size: 38px;
   font-weight: bold;
   transition: 0.4s;
   float: left;

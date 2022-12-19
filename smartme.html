@@ -3,202 +3,180 @@
 
 <head>
   <title>Portfolio Timo Breukers</title>
-  <link rel="stylesheet" type="text/css" href="cssopmaak.css">
+  <link rel="stylesheet" type="text/css" href="opmaak.css">
+  <link href="https://api.openweathermap.org/data/2.5/weather?q=Winterswijk&APPID=0fc9f2d6aa3b2717eb5d9bf53b61d152" rel="stylesheet"> 
 </head>
 
-<!--Youtube video toevoegen via delen > Insluiten> link kopieren en plakken-->
-<iframe width="560" height="315" src="https://www.youtube.com/embed/_YseaPdACwU" title="YouTube video player"
-  frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-  allowfullscreen></iframe>
+<!-- Navigatiebalk -->
+<body>
 
-<!--Presentatie toevoegen aan website. presentatie online openen via OneDrive > delen > genereren-->
-<iframe
-  src="https://onedrive.live.com/embed?cid=9A40D6AFD4F67205&amp;resid=9A40D6AFD4F67205%2113448&amp;authkey=APCN6m3v3iMWjXY&amp;em=2&amp;wdAr=1.7777777777777777"
-  width="476px" height="288px" frameborder="0">Dit is een ingesloten <a target="_blank"
-    href="https://office.com">Microsoft Office</a>-presentatiebestand dat mogelijk is gemaakt met <a target="_blank"
-    href="https://office.com/webapps">Office</a>.</iframe>
-
-<!-- Headings -->
-<div class="container">
-  <section id="showcase">
-    <h1>MSI Portfolio Timo Breukers</h1>
-  </section>
-  <!-- Navigatiebar -->
-  <html>
-
-  <head>
-    <style>
-      body {
-        background-color: rgb(255, 255, 255);
-      }
-
-      ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-        background-color: rgb(39, 0, 157);
-      }
-
-      li {
-        float: left;
-      }
-
-      li a,
-      .dropbtn {
-        display: inline-block;
-        color: white;
-        text-align: right;
-        padding: 14px 16px;
-        text-decoration: none;
-      }
-
-      li a:hover,
-      .dropdown:hover .dropbtn {
-        background-color: rgb(0, 95, 236);
-      }
-
-      li.dropdown {
-        display: inline-block;
-      }
-
-      .dropdown-content {
-        display: none;
-        position: absolute;
-        background-color: rgb(39, 0, 157);
-        min-width: 160px;
-        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-        z-index: 1;
-      }
-
-      .dropdown-content a {
-        color: rgb(255, 255, 255);
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
-        text-align: left;
-      }
-
-      .dropdown-content a:hover {
-        background-color: rgb(0, 95, 236);
-      }
-
-      .dropdown:hover .dropdown-content {
-        display: block;
-      }
-    </style>
-  </head>
-
-  <body>
-
-    <ul>
-      <div class="container tekst">
-        <li><a href="home.html">Home</a></li>
-        <li><a href="#news">Introductie</a></li>
-        <li class="dropdown">
-          <a href="javascript:void(0)" class="dropbtn">Leerdoelen ⌵</a>
-          <div class="dropdown-content">
-            <a href="#">Opgestelde leerdoelen</a>
-            <a href="#">Ontwikkelingen</a>
-            <a href="#">Conclusie</a>
-          </div>
-        </li>
-        <li><a href="smartme.html">Smart Me</a></li>
-        <li><a href="#news">Smart Connection</a></li>
-        <li><a href="#news">Smart Technology</a></li>
-        <li><a href="#news">Smart Business</a></li>
-        <li><a href="#news">Smart Project</a></li>
-        <li><a href="#news">Contact</a></li>
-        <li><a href="weerencovid.html">Weer en Covid</a></li>
-
-        <!--clock-->
-
-        <body onLoad="initClock()">
-
-          <div id="timedate">
-            <a id="mon">January</a>
-            <a id="d">1</a>,
-            <a id="y">0</a><br />
-            <a id="h">12</a> :
-            <a id="m">00</a>:
-            <a id="s">00</a>:
-            <a id="mi">000</a>
-          </div>
-          <script>
-
-            Number.prototype.pad = function (n) {
-              for (var r = this.toString(); r.length < n; r = 0 + r);
-              return r;
-            };
-
-            function updateClock() {
-              var now = new Date();
-              var milli = now.getMilliseconds(),
-                sec = now.getSeconds(),
-                min = now.getMinutes(),
-                hou = now.getHours(),
-                mo = now.getMonth(),
-                dy = now.getDate(),
-                yr = now.getFullYear();
-              var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-              var tags = ["mon", "d", "y", "h", "m", "s", "mi"],
-                corr = [months[mo], dy, yr, hou.pad(2), min.pad(2), sec.pad(2), milli];
-              for (var i = 0; i < tags.length; i++)
-                document.getElementById(tags[i]).firstChild.nodeValue = corr[i];
-            }
-
-            function initClock() {
-              updateClock();
-              window.setInterval("updateClock()", 1);
-            }
-
-          </script>
-        </body>
+  <div id="navbar">
+    <div id="logo">Portfolio MSI Timo Breukers</div>
+    <div id="navbar-right">
+      <a  href="home.html">Home</a>
+      <div class="dropdown">
+        <button class="dropbtn">Leerdoelen ⌵
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="leerdoelen.html">Opgestelde leerdoelen</a>
+          <a href="ontwikkelingen.html">Ontwikkelingen</a>
+          <a href="conclusie.html">Conclusie</a>
+        </div>
       </div>
-    </ul>
+      <a class="active" href="smartme.html">Smart Me</a>
+      <a href="connection.html">Smart Connection</a>
+      <a href="technology.html">Smart Technology</a>
+      <a href="business.html">Smart Business</a>
+      <a href="project.html">Smart Project</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
 
-    <h3>Dropdown Menu inside a Navigation Bar</h3>
-    <p>Hover over the "Dropdown" link to see the dropdown menu.</p>
+  <script>
+  // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
+  window.onscroll = function() {scrollFunction()};
+  
+  function scrollFunction() {
+    if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+      document.getElementById("navbar").style.padding = "42px 10px";
+      document.getElementById("logo").style.fontSize = "25px";
+    } else {
+      document.getElementById("navbar").style.padding = "60px 10px";
+      document.getElementById("logo").style.fontSize = "35px";
+    }
+  }
+  </script>
+
 
   </body>
 
-  </html>
+  <div class="container">
+    <div style="margin-top:210px;padding:15px 15px ">      
+        <p><b><FONT size="+3"><FONT color="#2a639d"> Smart Me</FONT></FONT></b></p>
+        <p>De module 'Smart Me' staat in het teken van mijn eigen persoonlijke proffesionele groei. Hieronder wordt de inhoud van de workshops kort beschreven waarna per workshop mijn persoonlijke leermomenten zijn beschreven. Elke workshops heeft door middel van de sterren een beoordeling gekregen op basis van de interesse in de workshop en hoe leuk ik het vond. De onderbouwing van deze beoordling is terug te zien onder 'Lesinhoud' en 'Leermomenten'.</p>
+        <hr></hr>
+        <p><i><FONT size="+2">Workshop 1 (7 september 2022): <b>Koken</b></i></FONT></p>
+          <p><img src="C:\Users\Gebruiker\OneDrive\Documenten\Saxion\Minor\MSI2A Smart Connection\webpagina\driesterren.jpg"width="130" height="30"></p>
+        <p><br><b>Lesinhoud</b></br>Tijdens deze workshop zijn we met zijn alle wezen koken bij 'Het Kook College Wijchen'. Hierbij kregen we als groep de opdracht om een driegangenmenu te koken. Nadat de groepen waren verdeelt, was ik met een aantal medestudenten verantwoordelijk voor het hoofdgerecht. Elke gang kreeg aparte producten waarmee gerechten gemaakt konden worden hierbij moest iedereen zelf kijken wat ze met de ingrediënten konden om een gerecht te creëeren.
+        Ik ben zelf niet van het koken en heb er ook geen enkele ervaring mee. Dit was voor mij ook de reden om de rest uit te laten zoeken wat ze wouden gaan koken. Je kon duidelijk zien welke mensen ervaring hadden in de keuken, deze mensen namen het voortouw om het groepsprocoes te leiden. Ik heb hierbij gevraagd aan mijn medestudenten wat ik kon doen om mij nuttig te maken, dit ging goed en ik kon zelf bezig met het maken van aardappelpuree. Op een gegeven moment kregen we extra ingrediënten en we mochten zelf bepalen wat we hiermee gingen doen. In eerste instantie werd hier niks mee gedaan maar nu een korte onderbrekening besloten we dit toch op te pakken. Uiteindelijk had ik tijd over en heb ik samen met twee anderen de ingrediënten gepakt en besloten om een amuse te maken.
+      Op een gegeven moment was het tijd om de gerechten op te leveren. Hier moest iedereen rekening houden met timemanagement door de gerechten op het juiste moment te serveren. Dit was nogal lastig omdat je eigenlijk aan tafel zat om te eten maar ondertussen ook in de gaten moet houden om het gerecht te serveren. Uiteindelijk zijn alle gerechten geserveerd(zie Foto's).</p>
+      <img src="C:\Users\Gebruiker\OneDrive\Documenten\Saxion\Minor\MSI2A Smart Connection\webpagina\kookworkshop.jpg" width="266" height="200"><img src="C:\Users\Gebruiker\OneDrive\Documenten\Saxion\Minor\MSI2A Smart Connection\webpagina\amuse.jpg" width="266" height="200"><img src="C:\Users\Gebruiker\OneDrive\Documenten\Saxion\Minor\MSI2A Smart Connection\webpagina\voorgerecht.jpg"width="266" height="200"><br><img src="C:\Users\Gebruiker\OneDrive\Documenten\Saxion\Minor\MSI2A Smart Connection\webpagina\hoofdgerecht.jpg"width="266" height="200"><img src="C:\Users\Gebruiker\OneDrive\Documenten\Saxion\Minor\MSI2A Smart Connection\webpagina\toetje.jpg"width="266" height="200">
+          </br>  
+      <p><br><b>Leermomenten</b></br>Ondanks dat koken absoluut niet mijn passie heeft was het wel een goede opdracht om anderen beter te leren kennen. Maar het was ook zeker van belang omdat met de kookworkshop ook gewerkt werd met een opdrachtgever. Deze opdrachtgever moest natuurlijk tevreden gesteld worden en daar meerdere interventiepauze's tussen het koken door werd het ook steeds duidelijker waar we rekening mee moesten houden. Bijvoorbeeld timemanagement(wanneer word welk gerecht opgeleverd), het einddoel in kaart brengen en het doorvragen aan de opdrachtgever tot duidelijk is wat hij wilt.</p>      
+      <hr></hr>
+      <p><i><FONT size="+2">Workshop 2 (15 september 2022): <b>Smart Journey</b></i></FONT></p>
+      <p><img src="C:\Users\Gebruiker\OneDrive\Documenten\Saxion\Minor\MSI2A Smart Connection\webpagina\viersterren.jpg"width="130" height="30"></p>
+      <p><br><b>Lesinhoud</b></br>Deze les bracht ons wat bij over de Smart Journey. Voordat wij de minor begonnen hebben wij allemaal een filmpje ontvangen met de opdracht om hierbij onze Smart Journey te beschrijven. Dit filmpje ging over de slimme technieken die gebruikt worden in Israël om onder andere bommen te onderscheppen en onschadelijk te maken, zie het filmpje hieronder. Op basis hiervan heb ik mijn eerste Smart Journey geschreven, de opdrachtbeschrijving wordt hierbij nogal vaag gehouden waardoor veel mensen een eigen interpretatie had gehouden, hieronder zie je mijn eerste Smart Journey met hoe ik de opdracht had geïnterpreteerd.</p>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/X7n11XAYp7k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe src="https://onedrive.live.com/embed?resid=9A40D6AFD4F67205%2111849&amp;authkey=!AKFkpmDjg9x4XXQ&amp;em=2" width="550px" height="310px" frameborder="0">Dit is een ingesloten <a target="_blank" href="https://office.com">Microsoft Office</a>-documentbestand dat mogelijk is gemaakt met <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>
+      <p>Deze les werd gegeven door Witek en Pieter, dit bracht een mooie combinatie van de theoretisch kennis van Witek en de enthousiaste verhalen uit de praktijk van Pieter. Dit zorgde er voor dat de les erg interessant bleef om bij deel te nemen ondanks dat ik als bedrijfskundige veel onderdelen al eens eerder had gehoord. De les bestond uit drie delen en werd gehouden aan de hand van een notebook waarin ik de onderdelen van de les in heb bijgehouden, deze is hieronder te zien. In het eerste deel werd vooral ingegaan op leerdoelen en exploratie, door het opstellen van Wicked Questions heb ik een aantal leerdoelen op kunnen stellen voor tijdens deze minor. Ook moesten we in dit gedeelte een held beschrijven, dit vond ik erg lastig omdat ik niet echt een held heb. Echter kom ik hier in de workshop van 4 oktober op terug door het held aspect te veranderen naar iemand die mij inspireerd. Het tweede deel ging over persoonlijke groei en reflectie, ik heb van mezelf een goede zelfreflectie en dit was voor mij veel herhaling vanuit bedrijfskunde. Het laatste gedeelte ging over me and the team. Hierin moesten we over een ander beschrijven wat de eerste indruk is van de andere persoon over jou. In de beschrijving van de ander kon ik mij erg vinden en ook degene die ik heb beschreven had ik redelijk goed inschatten. Zo kun je ook zien dat een eerste beeld van iemand in veel gevallen klopt(nu ik de beschreven persoon ook wat langer ken), nu is alleen de vraag of je een negatieve beeld van iemand kunt veranderen of niet, dit vind ik persoonlijk altijd wel lastig. Wel was dit gedeelte leuk en interessant om eens in te zien.</p>  
+      <iframe src="https://onedrive.live.com/embed?resid=9A40D6AFD4F67205%2115217&amp;authkey=!ALxBm64-UuRqXFY&amp;em=2&amp;wdAr=1.7777777777777777" width="476px" height="288px" frameborder="0">Dit is een ingesloten <a target="_blank" href="https://office.com">Microsoft Office</a>-presentatiebestand dat mogelijk is gemaakt met <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>
+      <p><br><b>Leermomenten</b></br>Inzicht gegeven in het opstellen van mijn leerdoelen, interessant om te weten wat de eerste indruk van anderen over mij is. In dit laatste kon ik mij ook wel vinden dus ook interessant om te zien dat mensen dat vaak direct zien. Ik wil me wel minder introvert zijn op de momenten en mij wel in de groep blijven mengen, hier wil ik ook op blijven letten gedurende de minor. 
+    </div>
+  </div>
 
-  <!-- Paragraaf Welkom-->
-  <p>
-    Dit portfolio is opgesteld tijdens de Minor Smart Industry aan de HAN in Nijmegen. In het portfolio zijn de volgende
-    onderdelen te zien:
-    <!-- Paragraaf Introductie-->
-  <p>
-  <H3>1. Introductie</H3>
-  </p>
-  Mijn naam is Timo Breukers, 23 jaar oud en ik kom uit Winterswijk. Op Hogeschool Saxion in Enschede zit ik nu in het
-  vierde jaar van de opleiding Bedrijfskunde. Naast school ben ik werkzaam bij <a href="https://www.breukers.nl/"
-    target="_blank">Breukers Bouwmaterialen</a>
-  <hr> hier doe ik. Momenteel ben ik bezig met de Minor Smart Industry. Ik heb deze gekozen omdat...
-  <!-- Paragraaf Leerdoelen-->
-  <p>
-  <H3>2. Leerdoelen</H3>
-  </p>
-  <!-- Paragraaf Ontwikkelingen-->
-  <p>
-  <H3>3. Ontwikkelingen</H3>
-  </p>
-  <!-- Paragraaf Conclusie-->
-  <p>
-  <H3>4. Conclusie</H3>
-  </p>
-  <!-- Paragraaf Gemaakte werk-->
-  <p>
-  <H3>5. Gemaakte werk</H3>
-  </p>
-  <!-- Paragraaf Overige-->
-  <p>
-  <H3>6. Overige</H3>
-  </p>
+  <!-- Vastzittende box met datum en tijd -->
 
+  <div class="navbarx">
+       
+          <body>
 
+            <div id="timedate">
+              <a id="mon">January</a>
+              <a id="d">1</a>
+              <a id="y">0</a>
+              <a id="h">12</a>
+              <a id="h">:</a>
+              <a id="m">00</a>
+            </div>
+           
+            <script lang=""text/javascript">
+  
+              Number.prototype.pad = function (n) {
+                for (var r = this.toString(); r.length < n; r = 0 + r);
+                return r;
+              };
+  
+              function updateClock() {
+                var now = new Date();
+                var milli = 
+                  min = now.getMinutes(),
+                  hou = now.getHours(),
+                  mo = now.getMonth(),
+                  dy = now.getDate(),
+                  yr = now.getFullYear();
+                var months = ["januari", "februari", "maart", "april", "mei", "juni", "juli", "augustus", "september", "oktober", "november", "december"];
+                var tags = ["mon", "d", "y", "h", "m"],
+                  corr = [dy,months[mo], yr, hou.pad(2), min.pad(2)];
+                for (var i = 0; i < tags.length; i++)
+                  document.getElementById(tags[i]).firstChild.nodeValue = corr[i];
+              }
+              initClock();
+              function initClock() {
+                updateClock();
+                window.setInterval("updateClock()", 1);
+              }
+  
+            </script>
+             
+        </body>
+   
+  </div>
 
+<!--Vastzittende box met weer en plaats-->
+  <div class="navbarx2">
+  <div id="timedate2">
+    <body>    
+      <div>
+       <h1 id="temp"></h1>
+       <div id="location"></div>
+      </div>
+  
+  
+  <script lang=""text/javascript">
+    const key = '';
+    if(key=='') document.getElementById('temp').innerHTML = ('0fc9f2d6aa3b2717eb5d9bf53b61d152');
+    
+    function weatherBallon( cityID ) {
+        fetch('https://api.openweathermap.org/data/2.5/weather?q=Winterswijk&APPID=0fc9f2d6aa3b2717eb5d9bf53b61d152')  
+        .then(function(resp) { return resp.json() }) // Convert data to json
+        .then(function(data) {
+            drawWeather(data);
+        })
+        .catch(function() {
+            // catch any errors
+        });
+    }
+    function drawWeather( d ) {
+      var celcius = Math.round(parseFloat(d.main.temp)-273.15);
+        var fahrenheit = Math.round(((parseFloat(d.main.temp)-273.15)*1.8)+32);
+      var description = d.weather[0].description; 
+        
+     
+        document.getElementById('temp').innerHTML = celcius + '&deg;';
+        document.getElementById('location').innerHTML = d.name;
+      
+      if( description.indexOf('rain') > 0 ) {
+          document.body.className = 'regenachtig';
+      } else if( description.indexOf('cloudy') > 0 ) {
+          document.body.className = 'bewolkt';
+      } else if( description.indexOf('sunny') > 0 ) {
+          document.body.className = 'zonnig';
+      } else {
+          document.body.className = 'helder';
+      }
+    }
+    window.onload = function() {
+        weatherBallon( 6167865 );
+    }
+  </script>
+  
+  
+  </body>
+</div>
 </div>
 
-</html>
+ 
+
+  </html>
