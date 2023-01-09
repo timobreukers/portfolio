@@ -4,10 +4,12 @@
 <head>
   <title>Portfolio Timo Breukers</title>
   <link rel="stylesheet" type="text/css" href="opmaak.css">
-  <link href="https://api.openweathermap.org/data/2.5/weather?q=Winterswijk&APPID=0fc9f2d6aa3b2717eb5d9bf53b61d152" rel="stylesheet"> 
+  <link href="https://api.openweathermap.org/data/2.5/weather?q=Winterswijk&APPID=0fc9f2d6aa3b2717eb5d9bf53b61d152"
+    rel="stylesheet">
 </head>
 
 <!-- Navigatiebalk -->
+
 <body>
 
   <div id="navbar">
@@ -34,131 +36,193 @@
   </div>
 
   <script>
-  // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
-  window.onscroll = function() {scrollFunction()};
-  
-  function scrollFunction() {
-    if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-      document.getElementById("navbar").style.padding = "42px 10px";
-      document.getElementById("logo").style.fontSize = "25px";
-    } else {
-      document.getElementById("navbar").style.padding = "60px 10px";
-      document.getElementById("logo").style.fontSize = "35px";
-    }
-  }
-  </script>
+    // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
+    window.onscroll = function () { scrollFunction() };
 
-
-  </body>
-
-  <div class="container">
-    <div style="margin-top:210px;padding:15px 15px ">      
-        <p><b><FONT size="+3"><FONT color="#2a639d"> Ontwikkelingen</FONT></FONT></b></p>
-        
-    </div>
-  </div>
-
-  <!-- Vastzittende box met datum en tijd -->
-
-  <div class="navbarx">
-       
-          <body>
-
-            <div id="timedate">
-              <a id="mon">January</a>
-              <a id="d">1</a>
-              <a id="y">0</a>
-              <a id="h">12</a>
-              <a id="h">:</a>
-              <a id="m">00</a>
-            </div>
-           
-            <script lang=""text/javascript">
-  
-              Number.prototype.pad = function (n) {
-                for (var r = this.toString(); r.length < n; r = 0 + r);
-                return r;
-              };
-  
-              function updateClock() {
-                var now = new Date();
-                var milli = 
-                  min = now.getMinutes(),
-                  hou = now.getHours(),
-                  mo = now.getMonth(),
-                  dy = now.getDate(),
-                  yr = now.getFullYear();
-                var months = ["januari", "februari", "maart", "april", "mei", "juni", "juli", "augustus", "september", "oktober", "november", "december"];
-                var tags = ["mon", "d", "y", "h", "m"],
-                  corr = [dy,months[mo], yr, hou.pad(2), min.pad(2)];
-                for (var i = 0; i < tags.length; i++)
-                  document.getElementById(tags[i]).firstChild.nodeValue = corr[i];
-              }
-              initClock();
-              function initClock() {
-                updateClock();
-                window.setInterval("updateClock()", 1);
-              }
-  
-            </script>
-             
-        </body>
-   
-  </div>
-
-<!--Vastzittende box met weer en plaats-->
-  <div class="navbarx2">
-  <div id="timedate2">
-    <body>    
-      <div>
-       <h1 id="temp"></h1>
-       <div id="location"></div>
-      </div>
-  
-  
-  <script lang=""text/javascript">
-    const key = '';
-    if(key=='') document.getElementById('temp').innerHTML = ('0fc9f2d6aa3b2717eb5d9bf53b61d152');
-    
-    function weatherBallon( cityID ) {
-        fetch('https://api.openweathermap.org/data/2.5/weather?q=Winterswijk&APPID=0fc9f2d6aa3b2717eb5d9bf53b61d152')  
-        .then(function(resp) { return resp.json() }) // Convert data to json
-        .then(function(data) {
-            drawWeather(data);
-        })
-        .catch(function() {
-            // catch any errors
-        });
-    }
-    function drawWeather( d ) {
-      var celcius = Math.round(parseFloat(d.main.temp)-273.15);
-        var fahrenheit = Math.round(((parseFloat(d.main.temp)-273.15)*1.8)+32);
-      var description = d.weather[0].description; 
-        
-     
-        document.getElementById('temp').innerHTML = celcius + '&deg;';
-        document.getElementById('location').innerHTML = d.name;
-      
-      if( description.indexOf('rain') > 0 ) {
-          document.body.className = 'regenachtig';
-      } else if( description.indexOf('cloudy') > 0 ) {
-          document.body.className = 'bewolkt';
-      } else if( description.indexOf('sunny') > 0 ) {
-          document.body.className = 'zonnig';
+    function scrollFunction() {
+      if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+        document.getElementById("navbar").style.padding = "42px 10px";
+        document.getElementById("logo").style.fontSize = "25px";
       } else {
-          document.body.className = 'helder';
+        document.getElementById("navbar").style.padding = "60px 10px";
+        document.getElementById("logo").style.fontSize = "35px";
       }
     }
-    window.onload = function() {
-        weatherBallon( 6167865 );
-    }
   </script>
-  
-  
+
+
+</body>
+
+<div class="container">
+  <div style="margin-top:210px;padding:15px 15px ">
+    <p><b><FONT size="+3"><FONT color="#2a639d"> Ontwikkelingen</FONT></FONT></b></p>
+    <p>Het ontwikkelproces is te volgen onder de webpagina's van de verschillende modules. Hieronder zijn per leerdoel de belangrijkste ontwikkelmomenten neergezet die hebben geholpen bij het bewerkstelligen van het leerdoel. De leerdoelen komen uit de webpagina: "Opgestelde leerdoelen" en de ontwikkelmomenten komen dus voort uit de webpagina's van de verschillende modules en zijn dus ook op die webpagina's verder toegelicht.</p>
+  <br></br>
+  <hr></hr>
+    <p><i><FONT size="+2"><b>Algemeen leerdoel:</b> Een basisniveau van kennis over de techniek ontwikkelen zodat ik later in het werkveld kan communiceren met mensen met technische kennis.</i></FONT></p>
+    <p><br><b>Belangrijkste ontwikkelmomenten:</b></br>
+    <ul style="list-style-type: square;">
+      <li>Breadboard in elkaar zetten en programmeren.</li>
+      <li>Geoefend met SolidWorks.</li>
+      <li>Printplaat ontwerpen.</li>
+      <li>Meegekeken en meegedacht bij 3D ontwerp plantenbakje in SolidWorks.</li>
+      <li>Code programmeren voor het automatiseren van de slimme plant.</li>
+    </ul></p>
+  <hr></hr>
+  <p><i><FONT size="+2"><b>1. Leerdoel Smart Me:</b> tekstteksttekst</i></FONT></p>
+  <p><br><b>Belangrijkste ontwikkelmomenten:</b></br>
+    <ul style="list-style-type: square;">
+      <li>m</li>
+      <li>m</li>
+      <li>m</li>
+      <li>m</li>
+      <li>m</li>
+    </ul></p>
+  <hr></hr>
+    <p><i><FONT size="+2"><b>2. Leerdoel Smart Connection:</b> tekstteksttekst</i></FONT></p>
+    <p><br><b>Belangrijkste ontwikkelmomenten:</b></br>
+    <ul style="list-style-type: square;">
+      <li>m</li>
+      <li>m</li>
+      <li>m</li>
+      <li>m</li>
+      <li>m</li>
+    </ul></p>
+  <hr></hr>
+    <p><i><FONT size="+2"><b>3. Leerdoel Smart Technology:</b> Een basisniveau van technische kennis opdoen en ontdekken waar mijn interesses op technisch gebied liggen om hierbij bewuste afwegingen te maken. </i></FONT></p>
+    <p><br><b>Belangrijkste ontwikkelmomenten:</b></br>
+    <ul style="list-style-type: square;">
+      <li>m</li>
+      <li>m</li>
+      <li>m</li>
+      <li>m</li>
+      <li>m</li>
+    </ul></p>
+  <hr></hr>
+    <p><i><FONT size="+2"><b>4. Leerdoel Smart Business:</b> tekstteksttekst</i></FONT></p>
+    <p><br><b>Belangrijkste ontwikkelmomenten:</b></br>
+    <ul style="list-style-type: square;">
+      <li>m</li>
+      <li>m</li>
+      <li>m</li>
+      <li>m</li>
+      <li>m</li>
+    </ul></p>
+  <hr></hr>
+    <p><i><FONT size="+2"><b>5. Leerdoel Smart Project:</b> Gedurende het project tijdens de minor wil ik meer aanwezig zijn in de groep door eerder vragen te stellen en mijn mening te geven op de momenten dat ik iets niet begrijp of ergens op een andere manier over nadenk.</i></FONT></p>
+    <p><br><b>Belangrijkste ontwikkelmomenten:</b></br>
+    <ul style="list-style-type: square;">
+      <li>m</li>
+      <li>m</li>
+      <li>m</li>
+      <li>m</li>
+      <li>m</li>
+    </ul></p>
+  </div>
+</div>
+
+<!-- Vastzittende box met datum en tijd -->
+
+<div class="navbarx">
+
+  <body>
+
+    <div id="timedate">
+      <a id="mon">January</a>
+      <a id="d">1</a>
+      <a id="y">0</a>
+      <a id="h">12</a>
+      <a id="h">:</a>
+      <a id="m">00</a>
+    </div>
+
+    <script lang="" text/javascript">
+
+      Number.prototype.pad = function (n) {
+        for (var r = this.toString(); r.length < n; r = 0 + r);
+        return r;
+      };
+
+      function updateClock() {
+        var now = new Date();
+        var milli =
+          min = now.getMinutes(),
+          hou = now.getHours(),
+          mo = now.getMonth(),
+          dy = now.getDate(),
+          yr = now.getFullYear();
+        var months = ["januari", "februari", "maart", "april", "mei", "juni", "juli", "augustus", "september", "oktober", "november", "december"];
+        var tags = ["mon", "d", "y", "h", "m"],
+          corr = [dy, months[mo], yr, hou.pad(2), min.pad(2)];
+        for (var i = 0; i < tags.length; i++)
+          document.getElementById(tags[i]).firstChild.nodeValue = corr[i];
+      }
+      initClock();
+      function initClock() {
+        updateClock();
+        window.setInterval("updateClock()", 1);
+      }
+
+    </script>
+
   </body>
-</div>
+
 </div>
 
- 
+<!--Vastzittende box met weer en plaats-->
+<div class="navbarx2">
+  <div id="timedate2">
 
-  </html>
+    <body>
+      <div>
+        <h1 id="temp"></h1>
+        <div id="location"></div>
+      </div>
+
+
+      <script lang="" text/javascript">
+        const key = '';
+        if (key == '') document.getElementById('temp').innerHTML = ('0fc9f2d6aa3b2717eb5d9bf53b61d152');
+
+        function weatherBallon(cityID) {
+          fetch('https://api.openweathermap.org/data/2.5/weather?q=Winterswijk&APPID=0fc9f2d6aa3b2717eb5d9bf53b61d152')
+            .then(function (resp) { return resp.json() }) // Convert data to json
+            .then(function (data) {
+              drawWeather(data);
+            })
+            .catch(function () {
+              // catch any errors
+            });
+        }
+        function drawWeather(d) {
+          var celcius = Math.round(parseFloat(d.main.temp) - 273.15);
+          var fahrenheit = Math.round(((parseFloat(d.main.temp) - 273.15) * 1.8) + 32);
+          var description = d.weather[0].description;
+
+
+          document.getElementById('temp').innerHTML = celcius + '&deg;';
+          document.getElementById('location').innerHTML = d.name;
+
+          if (description.indexOf('rain') > 0) {
+            document.body.className = 'regenachtig';
+          } else if (description.indexOf('cloudy') > 0) {
+            document.body.className = 'bewolkt';
+          } else if (description.indexOf('sunny') > 0) {
+            document.body.className = 'zonnig';
+          } else {
+            document.body.className = 'helder';
+          }
+        }
+        window.onload = function () {
+          weatherBallon(6167865);
+        }
+      </script>
+
+
+    </body>
+  </div>
+</div>
+
+
+
+</html>
