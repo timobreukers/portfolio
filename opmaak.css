@@ -257,17 +257,34 @@
  
 }
 
-/* foto's met bijschrift boxen */
-div.figure {
-  float: right;
+
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.column {
+  float: left;
   width: 30%;
-  border: thin silver solid;
-  margin: 0.5em;
-  padding: 0.5em;
+  padding: 15px;
 }
-div.figure p {
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+hr {
+  border: none;
+  border-top: 7px double rgb(42, 100, 158);
+  color: rgb(42, 100, 158);
+  overflow: visible;
   text-align: center;
-  font-style: italic;
-  font-size: smaller;
-  text-indent: 0;
+  height: 10px;
+}
+
+hr:after {
+  background: #fff;
+  content: '🌎';
+  padding: 10 4px;
+  position: relative; 
+  top: -13px;
 }
