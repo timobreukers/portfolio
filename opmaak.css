@@ -272,6 +272,22 @@
   display: table;
 }
 
+/* For CONTACT page: Three image containers (use 25% for four, and 50% for two, etc) */
+.column2 {
+  float: right;
+  width: 100%;
+  padding: 5px;
+}
+
+/* For CONTACT page:Clear floats after image containers */
+.row2::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+/* Tussenlijn HR */
 hr {
   border: none;
   border-top: 7px double rgb(42, 100, 158);
